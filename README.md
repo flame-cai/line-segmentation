@@ -26,6 +26,6 @@ Other variations such as page size, curvy, handwritten lines, handwriting style,
  1) Clone this repo: ```git clone https://github.com/flame-cai/line-segmentation.git```
  2) Create conda enviroment ```conda env create --name envname --file=requirements.yml```
  3) Create a folder ```input_images/YOUR_MANUSCRIPT_NAME```
- 4) Set the ```craft_fork_v5.ipynb``` kernel to the conda environment
+ 4) Set the ```craft_fork_v5.ipynb``` kernel to the conda environment ```envname```
  5) Update the manuscript name in ```craft_fork_v5.ipynb``` with ```YOUR_MANUSCRIPT_NAME```
  6) Run all cells of ```craft_fork_v5.ipynb```
