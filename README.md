@@ -3,7 +3,7 @@
 ## Overview
 Robustly segmenting the text lines from a wide variety of Page Layouts (eg: newspapers, books, comics, receipts, manuscripts) is a hard problem. On the other hand, segmenting text lines from fully standardized page layouts has been solved (eg: Form-4A, Government of XYZ). 
 
-Our method builds on the [CRAFT model](https://github.com/clovaai/CRAFT-pytorch) and finds a middle ground that enables us to segment text lines from documents which meet a selection criteria, but also handles variations within them. 
+Our method builds on the [CRAFT model](https://github.com/clovaai/CRAFT-pytorch) and finds a middle ground - it enables us to segment text lines from documents with variations (page size, curvy, handwritten lines, handwriting style, variation and size, calligraphy, ornamentation, page texture, and page color), as long as the meet a layout based selection criteria.
 
 **Our primarly learning is that it is easier segment text lines using projection-profile based approches when the raw images are first passed through CRAFT to convert them into heatmaps. In other words, it is easier to work with CRAFT outputs(heatmaps) as compared to raw images.**
 
@@ -20,7 +20,7 @@ Below we find the selection criteria for the manuscripts which the code in this 
 - we restrict ourselves to working with non-pictorial, single-column text manuscripts
 - we require each line of the manuscript to run from left all the way to the right, and not stop somewhere in between.
 
-Other variations such as page size, curvy, handwritten lines, handwriting style, variation and size, calligraphy, ornamentation, page texture, and page color will be handle by CRAFT. It is also feasible to automatically detect pages which do not meet this selection criteria by doing anomaly detection on the heatmaps.
+It is also feasible to automatically detect pages which do not meet this selection criteria by doing anomaly detection on the heatmaps.
 
 ## Getting Started
  1) Clone this repo: ```git clone https://github.com/flame-cai/line-segmentation.git```
